@@ -1,0 +1,75 @@
+services: 
+  apple-service: 
+    image: service
+    ports:
+      - 3006:3000
+    container_name: apple-service
+    environment:
+      - SERVICE_NAME=apple
+      - CERTIFICATE=/ssl/certificate.crt
+      - PRIVATE_KEY=/ssl/private.key
+    volumes:
+      - ./ssl:/ssl
+    # networks:
+    #   - service-network
+
+  orange-service: 
+    image: service
+    ports:
+      - 3002:3000
+    container_name: orange-service
+    environment:
+      - SERVICE_NAME=orange
+      - CERTIFICATE=/ssl/certificate.crt
+      - PRIVATE_KEY=/ssl/private.key
+    volumes:
+      - ./ssl:/ssl
+    # networks:
+    #   - service-network
+
+  grape-service: 
+    image: service
+    ports:
+      - 3003:3000
+    container_name: grape-service
+    environment:
+      - SERVICE_NAME=grape
+      - CERTIFICATE=/ssl/certificate.crt
+      - PRIVATE_KEY=/ssl/private.key
+    volumes:
+      - ./ssl:/ssl
+    # networks:
+    #   - service-network
+
+  mango-service: 
+    image: service
+    ports:
+      - 3004:3000
+    container_name: mango-service
+    environment:
+      - SERVICE_NAME=mango
+      - CERTIFICATE=/ssl/certificate.crt
+      - PRIVATE_KEY=/ssl/private.key
+    volumes:
+      - ./ssl:/ssl
+    # networks:
+    #   - service-network
+
+  pineapple-service: 
+    image: service
+    ports:
+      - 3005:3000
+    container_name: pineapple-service
+    environment:
+      - SERVICE_NAME=pineapple
+      - CERTIFICATE=/ssl/certificate.crt
+      - PRIVATE_KEY=/ssl/private.key
+    volumes:
+      - ./ssl:/ssl
+    # networks:
+    #   - service-network
+
+networks:
+  service-network:
+    name: service-network
+    external: true
