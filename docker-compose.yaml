@@ -1,15 +1,15 @@
 services: 
-  apple-service: 
-    image: service
-    ports:
-      - 3006:3000
-    container_name: apple-service
-    environment:
-      - SERVICE_NAME=apple
-      - CERTIFICATE=/ssl/certificate.crt
-      - PRIVATE_KEY=/ssl/private.key
-    volumes:
-      - ./ssl:/ssl
+  # # apple-service: 
+  #   image: service
+  #   ports:
+  #     - 3006:3000
+  #   container_name: apple-service
+  #   environment:
+  #     - SERVICE_NAME=apple
+  #     - CERTIFICATE=/ssl/certificate.crt
+  #     - PRIVATE_KEY=/ssl/private.key
+  #   volumes:
+  #     - ./ssl:/ssl
     # networks:
     #   - service-network
 
