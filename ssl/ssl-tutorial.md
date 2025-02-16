@@ -13,3 +13,5 @@ https://www.youtube.com/watch?v=wzbf9ldvBjM
 05. verfiy = openssl req -text -in ssl/certificate.csr -noout -verify
 
 06. CRT - self-signed-certificate =  openssl x509 -in certificate.csr -out certificate.ctr -req -signkey ssl/private.key -days 365  
+
+07. Terminate Nginx - TASKKILL /F /IM nginx.exe
